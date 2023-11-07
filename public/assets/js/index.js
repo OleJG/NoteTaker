@@ -1,3 +1,15 @@
+app.get('/notes', (req, res) => {
+  res.sendFile(path.join(__dirname, 'path_to_notes.html'));
+});
+
+app.use(express.static('public'));
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+
 let noteForm;
 let noteTitle;
 let noteText;
