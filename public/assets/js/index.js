@@ -1,11 +1,4 @@
 
-app.get('/notes', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public/notes.html'));
-});
-
-
-
-
 let noteForm;
 let noteTitle;
 let noteText;
@@ -23,6 +16,7 @@ if (window.location.pathname === '/notes') {
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
+const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
