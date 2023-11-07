@@ -1,13 +1,9 @@
+
 app.get('/notes', (req, res) => {
-  res.sendFile(path.join(__dirname, 'path_to_notes.html'));
+  res.sendFile(path.join(__dirname, '/public/notes.html'));
 });
 
-app.use(express.static('public'));
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
 
 
 let noteForm;
@@ -26,6 +22,10 @@ if (window.location.pathname === '/notes') {
   clearBtn = document.querySelector('.clear-btn');
   noteList = document.querySelectorAll('.list-container .list-group');
 }
+
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
+});
 
 // Show an element
 const show = (elem) => {
