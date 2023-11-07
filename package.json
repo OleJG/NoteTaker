@@ -1,14 +1,21 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Your Task",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Jordan Gallegos",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "express": "^4.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "note-taker"
+  },
+  "keywords": [
+    "none"
+  ]
 }
